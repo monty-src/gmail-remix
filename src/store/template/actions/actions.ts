@@ -5,4 +5,4 @@
  */
 import { setTemplate } from "./template";
 
-export default { setTemplate };
+export const actions = { setTemplate };

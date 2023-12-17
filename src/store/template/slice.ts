@@ -5,6 +5,8 @@
  */
 import { createSlice } from "@reduxjs/toolkit";
 
+import { actions } from "./actions/actions";
+
 /**
  * Initial state
  *
@@ -17,11 +19,11 @@ const initialState: {} = {};
 export const siteSlice = createSlice({
   name: "site",
   initialState,
-  reducers: {},
+  reducers: actions,
 });
 
 /** Export actions */
-export const {} = siteSlice.actions;
+export const { setTemplate } = siteSlice.actions;
 
 /** Export reducers */
-export default siteSlice.reducer;
+export const templateSlice = siteSlice.reducer;
