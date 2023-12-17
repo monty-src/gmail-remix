@@ -3,8 +3,12 @@
  *
  *
  */
-
+import { IconButton } from "@mui/material";
+import AppsIcon from "@mui/icons-material/Apps";
 import MenuIcon from "@mui/icons-material/Menu";
+
+
+import { Search } from "../search/Search";
 
 import {
   GmailLogo,
@@ -13,9 +17,6 @@ import {
   GmailHeaderMiddle,
   GmailHeaderContainer,
 } from "../../styles/styles";
-import { IconButton } from "@mui/material";
-
-interface Props {}
 
 /**
  * Header
@@ -33,8 +34,14 @@ export const Header = (props: any): JSX.Element => {
         </IconButton>
         <GmailLogo src="/images/gmail-logo.png" />
       </GmailHeaderLeft>
-      <GmailHeaderMiddle></GmailHeaderMiddle>
-      <GmailHeaderRight></GmailHeaderRight>
+      <GmailHeaderMiddle>
+        <Search />
+      </GmailHeaderMiddle>
+      <GmailHeaderRight>
+        <IconButton>
+          <AppsIcon />
+        </IconButton>
+      </GmailHeaderRight>
     </GmailHeaderContainer>
   );
 };

@@ -3,7 +3,7 @@
  *
  *
  */
-import { Header } from "./Headers/Header";
+import { Header } from "./headers/Header";
 
 /**
  * App
