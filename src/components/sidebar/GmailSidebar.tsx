@@ -4,6 +4,8 @@
  *
  */
 import { GmailComposeButton } from "./GmailComposeButton";
+import { GmailSidebarOptions } from "./GmailSidebarOptions";
+
 import { GmailSidebarContainer } from "../../styles/sidebar";
 
 /**
@@ -17,6 +19,7 @@ export const GmailSidebar = (props: any): JSX.Element => {
   return (
     <GmailSidebarContainer>
       <GmailComposeButton />
+      <GmailSidebarOptions />
     </GmailSidebarContainer>
   );
 };

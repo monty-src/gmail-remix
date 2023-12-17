@@ -9,6 +9,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   /** Overrides cause i don't want to set theme */
