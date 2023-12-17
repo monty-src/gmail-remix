@@ -4,7 +4,7 @@
  *
  */
 
-import { Inbox } from "@mui/icons-material";
+import { Inbox, Star } from "@mui/icons-material";
 import { GmailSidebarOptionsContainer } from "../../styles/sidebar";
 import { GmailSidebarOption } from "./GmailSidebarOption";
 
@@ -18,7 +18,8 @@ import { GmailSidebarOption } from "./GmailSidebarOption";
 export const GmailSidebarOptions = (props: {}): JSX.Element => {
   return (
     <GmailSidebarOptionsContainer>
-      <GmailSidebarOption Icon={Inbox} title="Inbox" number={54} />
+      <GmailSidebarOption Icon={Inbox} title="Inbox" number={54} selected />
+      <GmailSidebarOption Icon={Star} title="Starred" number={22} />
     </GmailSidebarOptionsContainer>
   );
 };

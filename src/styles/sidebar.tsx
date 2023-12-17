@@ -33,7 +33,9 @@ export const GmailSidebarOptionsContainer = styled.section``;
  *
  * @returns {JSX.Element}
  */
-export const GmailSidebarOptionContainer = styled.section`
+export const GmailSidebarOptionContainer = styled.section<{
+  selected?: boolean;
+}>`
   height: 40px;
   padding: 0 10px;
 
@@ -54,8 +56,8 @@ export const GmailSidebarOptionContainer = styled.section`
   }
 
   > p {
-    display: none;
     font-weight: 300;
+    display: ${({ selected }) => (selected ? "inline" : "none")};
   }
 
   &:hover > p {
@@ -72,5 +74,4 @@ export const GmailSidebarOptionContainer = styled.section`
   > .MuiSvgIcon-root {
     padding: 5px;
   }
-  
 `;

@@ -11,6 +11,7 @@ import { GmailSidebarOptionContainer } from "../../styles/sidebar";
 interface GmailSidebarOptionProps {
   title: string;
   number: number;
+  selected?: boolean;
   Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string };
 }
 
@@ -25,9 +26,10 @@ export const GmailSidebarOption = ({
   Icon,
   title,
   number,
+  selected,
 }: GmailSidebarOptionProps): JSX.Element => {
   return (
-    <GmailSidebarOptionContainer>
+    <GmailSidebarOptionContainer selected={selected}>
       <Icon />
       <h3>{title}</h3>
       <p>{number}</p>
