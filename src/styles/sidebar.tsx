@@ -48,15 +48,22 @@ export const GmailSidebarOptionContainer = styled.section<{
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 
+  color: ${({ selected }) => selected && "#c04b37"};
+  background: ${({ selected }) => selected && "#fcecec"};
+
   > h3 {
     flex: 1;
     margin-left: 10px;
     font-size: 14px;
     font-weight: 400;
+    color: ${({ selected }) => selected && "#c04b37"};
+    background: ${({ selected }) => selected && "#fcecec"};
   }
 
   > p {
     font-weight: 300;
+    color: ${({ selected }) => selected && "#c04b37"};
+    background: ${({ selected }) => selected && "#fcecec"};
     display: ${({ selected }) => (selected ? "inline" : "none")};
   }
 
