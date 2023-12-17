@@ -2,10 +2,8 @@
  * components/App
  *
  *
- * @returns {JSX.Element}
  */
-import React from "react";
-import "./App.css";
+import { Header } from "./Headers/Header";
 
 /**
  * App
@@ -14,7 +12,12 @@ import "./App.css";
  * @returns {JSX.Element}
  */
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="app">
+      <Header />
+      <h1>Lets build something</h1>
+    </div>
+  );
 }
 
 /** Export */
