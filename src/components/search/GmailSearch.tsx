@@ -6,7 +6,7 @@
 import { SearchIcon } from "../icons/SearchIcon";
 import { ArrowDropDownIcon } from "../icons/ArrowDropDownIcon";
 
-import { GmailSearchInput, GmailSearchContainer } from "../../styles/styles";
+import { GmailSearchInput, GmailSearchContainer } from "../../styles/search";
 
 /**
  * Gmail Search

@@ -15,7 +15,7 @@ import {
   GmailHeaderRight,
   GmailHeaderMiddle,
   GmailHeaderContainer,
-} from "../../styles/styles";
+} from "../../styles/header";
 
 /**
  * Gmail Header
