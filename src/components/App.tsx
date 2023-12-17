@@ -3,7 +3,7 @@
  *
  *
  */
-import { Header } from "./headers/Header";
+import { GmailHeader } from "./headers/GmailHeader";
 
 /**
  * App
@@ -14,7 +14,7 @@ import { Header } from "./headers/Header";
 function App() {
   return (
     <div className="app">
-      <Header />
+      <GmailHeader />
       <h1>Lets build something</h1>
     </div>
   );

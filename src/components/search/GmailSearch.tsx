@@ -1,27 +1,24 @@
 /**
- * components/Search/Search
+ * components/search/GmailSearch
  *
  *
  */
-import { IconButton } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { SearchIcon } from "../icons/SearchIcon";
+import { ArrowDropDownIcon } from "../icons/ArrowDropDownIcon";
 
 import { GmailSearchInput, GmailSearchContainer } from "../../styles/styles";
 
 /**
- * Search
+ * Gmail Search
  *
  *
  * @param {} props
  * @returns {JSX.Element}
  */
-export const Search = (props: any): JSX.Element => {
+export const GmailSearch = (props: any): JSX.Element => {
   return (
     <GmailSearchContainer>
-      <IconButton>
-        <SearchIcon />
-      </IconButton>
+      <SearchIcon />
       <GmailSearchInput placeholder="Search mail" type="text" />
       <ArrowDropDownIcon />
     </GmailSearchContainer>

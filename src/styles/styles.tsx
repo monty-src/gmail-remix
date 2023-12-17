@@ -59,7 +59,9 @@ export const GmailHeaderMiddle = styled.div`
  *
  * @returns {JSX.Element}
  */
-export const GmailHeaderRight = styled.div``;
+export const GmailHeaderRight = styled.div`
+  display: flex;
+`;
 
 /**
  * Gmail Header Right

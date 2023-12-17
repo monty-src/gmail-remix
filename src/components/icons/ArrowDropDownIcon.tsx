@@ -1,5 +1,9 @@
+/**
+ * src/icons/ArrowDropDown
+ *
+ *
+ */
 import { IconLayout } from "./IconLayout";
-
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
 
 /**
@@ -8,7 +12,7 @@ import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
  *
  * @returns {JSX.Element}
  */
-export const ArrowDropDownIcon = (
+export const ArrowDropDownIcon = () => (
   <IconLayout>
     <ArrowDropDown />
   </IconLayout>

@@ -1,5 +1,9 @@
+/**
+ * src/icons/SearchIcon
+ *
+ *
+ */
 import { IconLayout } from "./IconLayout";
-
 import Search from "@mui/icons-material/Search";
 
 /**
@@ -8,7 +12,7 @@ import Search from "@mui/icons-material/Search";
  *
  * @returns {JSX.Element}
  */
-export const SearchIcon = (
+export const SearchIcon = () => (
   <IconLayout>
     <Search />
   </IconLayout>

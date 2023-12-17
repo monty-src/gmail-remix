@@ -1,19 +1,19 @@
 /**
- * src/icons/MenuIcon
+ * src/icons/AvatarIcon
  *
  *
  */
+import { Avatar } from "@mui/material";
 import { IconLayout } from "./IconLayout";
-import Menu from "@mui/icons-material/Menu";
 
 /**
- * Menu Icon
+ * Avatar Icon
  *
  *
  * @returns {JSX.Element}
  */
-export const MenuIcon = () => (
+export const AvatarIcon = () => (
   <IconLayout>
-    <Menu />
+    <Avatar />
   </IconLayout>
 );
