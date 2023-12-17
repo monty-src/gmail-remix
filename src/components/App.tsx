@@ -3,7 +3,9 @@
  *
  *
  */
+import { GmailApp } from "../styles/styles";
 import { GmailHeader } from "./headers/GmailHeader";
+import { GmailSidebar } from "./sidebar/GmailSidebar";
 
 /**
  * App
@@ -13,10 +15,10 @@ import { GmailHeader } from "./headers/GmailHeader";
  */
 function App() {
   return (
-    <div className="app">
+    <GmailApp>
       <GmailHeader />
-      <h1>Lets build something</h1>
-    </div>
+      <GmailSidebar />
+    </GmailApp>
   );
 }
 

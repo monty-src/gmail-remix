@@ -23,6 +23,7 @@ export const GmailHeaderContainer = styled.header`
 export const GmailHeaderLeft = styled.div`
   display: flex;
   align-items: center;
+  padding-left: 20px;
 `;
 
 /**
