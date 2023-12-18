@@ -86,6 +86,10 @@ export const GmailMailBodyHeader = styled.section`
     font-weight: 400;
     margin-right: 20px;
   }
+
+  > p {
+    margin-left: 20px;
+  }
 `;
 
 /**
@@ -110,4 +114,27 @@ export const GmailMailBodyImportant = styled.section``;
  *
  * @returns {JSX.Element}
  */
-export const GmailMailBodyMessage = styled.section``;
+export const GmailMailBodyMessage = styled.section`
+  > p {
+    overflow-wrap: break-word;
+
+    padding: 10px;
+    margin-right: 20px;
+  }
+`;
+
+/**
+ * Gmail Mail Body Title
+ *
+ *
+ * @returns {JSX.Element}
+ */
+export const GmailMailBodyTitle = styled.span`
+  right: 0;
+  top: 24px;
+  position: absolute;
+
+  font-size: 12px;
+
+  color: #808080;
+`;

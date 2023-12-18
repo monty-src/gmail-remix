@@ -22,6 +22,7 @@ import { LabelImportantIcon } from "../icons/LabelImportantIcon";
 import {
   GmailMailBody,
   GmailMailTools,
+  GmailMailBodyTitle,
   GmailMailContainer,
   GmailMailToolsLeft,
   GmailMailToolsRight,
@@ -72,7 +73,7 @@ export const GmailMail = () => {
           <h2>Subject</h2>
           <LabelImportantIcon color="#e8ab02" />
           <p>Title</p>
-          <p>10pm</p>
+          <GmailMailBodyTitle>10pm</GmailMailBodyTitle>
         </GmailMailBodyHeader>
         <GmailMailBodyMessage>This is a message</GmailMailBodyMessage>
       </GmailMailBody>
