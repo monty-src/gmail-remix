@@ -3,6 +3,10 @@
  *
  *
  */
-import { setTemplate } from "./template";
+import { closeSendMessage } from "./closeSendMessage";
+import { openSendMessage } from "./openSendMessage";
 
-export const actions = { setTemplate };
+export const actions = {
+  openSendMessage,
+  closeSendMessage,
+};

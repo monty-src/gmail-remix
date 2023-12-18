@@ -1,16 +1,19 @@
 /**
- * src/store/template/actions/template
+ * src/store/mail/actions/closeSendMessage
  *
  *
  */
 import { Draft, PayloadAction } from "@reduxjs/toolkit";
 
 /**
- * Set Template
+ * Close Send Message
  *
  *
  * @param {Draft<{}>} state
  * @param {PayloadAction<{}>} action
  * @returns {void}
  */
-export const setTemplate = (state: Draft<{}>, action: PayloadAction<{}>) => {};
+export const closeSendMessage = (
+  state: Draft<{}>,
+  action: PayloadAction<{}>
+) => {};
