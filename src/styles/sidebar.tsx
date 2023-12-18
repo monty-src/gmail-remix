@@ -1,3 +1,8 @@
+/**
+ * styles/sidebar/sidebar
+ *
+ *
+ */
 import styled from "styled-components";
 
 /**
@@ -82,3 +87,21 @@ export const GmailSidebarOptionContainer = styled.section<{
     padding: 5px;
   }
 `;
+
+
+/**
+ * Gmail Sidebar Footer Container
+ *
+ *
+ * @returns {JSX.Element}
+ */
+export const GmailSidebarFooterContainer = styled.section``;
+
+
+/**
+ * Gmail Sidebar Footer Icons
+ *
+ *
+ * @returns {JSX.Element}
+ */
+export const GmailSidebarFooterIcons = styled.section``;
