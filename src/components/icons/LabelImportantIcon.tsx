@@ -1,20 +1,25 @@
 /**
-/**
  * components/icons/LabelImportantIcon
  *
  *
  */
 import { IconLayout } from "./IconLayout";
-import LabelImportant from "@mui/icons-material/LabelImportant";
+
+import { LabelImportantContainer } from "../../styles/icons";
+
+interface LabelImportantIconProps {
+  color?: string;
+}
 
 /**
  * Label Important Icon
  *
  *
+ * @param {props} color
  * @returns {JSX.Element}
  */
-export const LabelImportantIcon = () => (
+export const LabelImportantIcon = ({ color }: LabelImportantIconProps) => (
   <IconLayout>
-    <LabelImportant />
+    <LabelImportantContainer color={color} />
   </IconLayout>
 );

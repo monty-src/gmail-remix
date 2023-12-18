@@ -3,7 +3,6 @@
  *
  *
  */
-
 import { GmailEmailSectionContainer } from "../../styles/email";
 
 interface GmailEmailSectionProps {
@@ -26,8 +25,6 @@ export const GmailEmailSection = ({
   color,
   selected,
 }: GmailEmailSectionProps) => {
-  console.log("selected: ", selected);
-
   return (
     <GmailEmailSectionContainer color={color} selected={selected}>
       <Icon />

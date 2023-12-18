@@ -70,11 +70,11 @@ export const GmailMail = () => {
       <GmailMailBody>
         <GmailMailBodyHeader>
           <h2>Subject</h2>
-          <LabelImportantIcon />
+          <LabelImportantIcon color="#e8ab02" />
           <p>Title</p>
           <p>10pm</p>
         </GmailMailBodyHeader>
-        <GmailMailBodyMessage></GmailMailBodyMessage>
+        <GmailMailBodyMessage>This is a message</GmailMailBodyMessage>
       </GmailMailBody>
     </GmailMailContainer>
   );
