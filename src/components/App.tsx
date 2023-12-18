@@ -3,9 +3,14 @@
  *
  *
  */
-import { GmailApp } from "../styles/styles";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { GmailMail } from "./mail/GmailMail";
 import { GmailHeader } from "./headers/GmailHeader";
 import { GmailSidebar } from "./sidebar/GmailSidebar";
+
+import { GmailApp, GmailBody } from "../styles/styles";
+import { GmailEmailList } from "./mail/GmailEmailList";
 
 /**
  * App
@@ -15,10 +20,18 @@ import { GmailSidebar } from "./sidebar/GmailSidebar";
  */
 function App() {
   return (
-    <GmailApp>
-      <GmailHeader />
-      <GmailSidebar />
-    </GmailApp>
+    <Router>
+      <GmailApp>
+        <GmailHeader />
+        <GmailBody>
+          <GmailSidebar />
+          <Routes>
+            <Route path="/mail" element={<GmailMail />} />
+            <Route path="/" element={<GmailEmailList />} />
+          </Routes>
+        </GmailBody>
+      </GmailApp>
+    </Router>
   );
 }
 

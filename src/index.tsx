@@ -9,7 +9,10 @@ import ReactDOM from "react-dom/client";
 
 import App from "./components/App";
 import { Providers } from "./bootstrap/Providers";
+
+
 import { GlobalStyles } from "./styles/styles";
+
 
 /**
  * Root

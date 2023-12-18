@@ -23,9 +23,17 @@ export const GlobalStyles = createGlobalStyle`
 
 
 /**
- * GmailApp
+ * Gmail App
  * 
  * 
  * @returns {JSX.Element}
  */
 export const GmailApp = styled.section``;
+
+/**
+ * Gmail Body
+ * 
+ * 
+ * @returns {JSX.Element}
+ */
+export const GmailBody = styled.section``;
