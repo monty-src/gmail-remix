@@ -1,5 +1,5 @@
 /**
- * src/icons/IconLayout
+ * components/icons/IconLayout
  *
  *
  */

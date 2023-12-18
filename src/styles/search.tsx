@@ -1,3 +1,9 @@
+/**
+ * styles/search
+ *
+ *
+ *
+ */
 import styled from "styled-components";
 
 /**

@@ -1,5 +1,5 @@
 /**
- * src/icons/DuoIcon
+ * components/icons/DuoIcon
  *
  *
  */

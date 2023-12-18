@@ -1,5 +1,5 @@
 /**
- * src/icons/AppsIcon
+ * components/icons/AppsIcon
  *
  *
  */

@@ -1,5 +1,5 @@
 /**
- * src/icons/MenuIcon
+ * components/icons/MenuIcon
  *
  *
  */

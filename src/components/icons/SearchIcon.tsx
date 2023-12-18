@@ -1,5 +1,5 @@
 /**
- * src/icons/SearchIcon
+ * components/icons/SearchIcon
  *
  *
  */

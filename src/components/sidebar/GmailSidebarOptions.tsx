@@ -4,12 +4,12 @@
  *
  */
 import {
-  AccessTime,
-  ExpandMore,
-  Inbox,
-  NearMe,
   Note,
   Star,
+  Inbox,
+  NearMe,
+  AccessTime,
+  ExpandMore,
 } from "@mui/icons-material";
 import { GmailSidebarOption } from "./GmailSidebarOption";
 import { GmailSidebarOptionsContainer } from "../../styles/sidebar";

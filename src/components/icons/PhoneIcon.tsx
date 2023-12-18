@@ -1,5 +1,5 @@
 /**
- * src/icons/PhoneIcon
+ * components/icons/PhoneIcon
  *
  *
  */

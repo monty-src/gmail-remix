@@ -1,3 +1,8 @@
+/**
+ * styles/styles
+ *
+ *
+ */
 import styled, { createGlobalStyle } from "styled-components";
 
 /**

@@ -1,5 +1,5 @@
 /**
- * src/icons/NotificationsIcon
+ * components/icons/NotificationsIcon
  *
  *
  */

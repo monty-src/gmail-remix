@@ -1,5 +1,5 @@
 /**
- * @module src/bootstrap/Providers
+ * bootstrap/Providers
  *
  *
  */

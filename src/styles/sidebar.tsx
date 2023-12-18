@@ -1,5 +1,6 @@
 /**
- * styles/sidebar/sidebar
+ * styles/sidebar
+ *
  *
  *
  */
@@ -88,15 +89,16 @@ export const GmailSidebarOptionContainer = styled.section<{
   }
 `;
 
-
 /**
  * Gmail Sidebar Footer Container
  *
  *
  * @returns {JSX.Element}
  */
-export const GmailSidebarFooterContainer = styled.section``;
-
+export const GmailSidebarFooterContainer = styled.section`
+  display: flex;
+  justify-content: center;
+`;
 
 /**
  * Gmail Sidebar Footer Icons
