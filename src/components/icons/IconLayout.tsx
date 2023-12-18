@@ -5,17 +5,21 @@
  */
 import { IconButton } from "@mui/material";
 
-interface Props {
+interface IconLayoutProps {
   children: JSX.Element;
+  handleClick?: () => void;
 }
 
 /**
  * Icon Layout
  *
  *
- * @param {JSX.Element} children
+ * @param {IconLayoutProps} props
  * @returns {JSX.Element}
  */
-export const IconLayout = ({ children }: Props): JSX.Element => {
-  return <IconButton>{children}</IconButton>;
+export const IconLayout = ({
+  children,
+  handleClick,
+}: IconLayoutProps): JSX.Element => {
+  return <IconButton onClick={handleClick}>{children}</IconButton>;
 };

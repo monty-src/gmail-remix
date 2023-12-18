@@ -4,7 +4,7 @@
  *
  */
 
-import { GmailEmailSectionContainer } from "../../styles/mail";
+import { GmailEmailSectionContainer } from "../../styles/email";
 
 interface GmailEmailSectionProps {
   title: string;
@@ -26,8 +26,7 @@ export const GmailEmailSection = ({
   color,
   selected,
 }: GmailEmailSectionProps) => {
-
-  console.log('selected: ', selected);
+  console.log("selected: ", selected);
 
   return (
     <GmailEmailSectionContainer color={color} selected={selected}>

@@ -15,13 +15,13 @@ import { ArrowDropDownIcon } from "../icons/ArrowDropDownIcon";
 
 import { GmailEmailSections } from "./GmailEmailSections";
 
-
 import {
   GmailEmailListSettings,
   GmailEmailListContainer,
   GmailEmailListSettingsLeft,
   GmailEmailListSettingsRight,
-} from "../../styles/mail";
+} from "../../styles/email";
+import { GmailEmailRows } from "./GmailEmailRows";
 
 /**
  * Gmail Email List
@@ -46,5 +46,6 @@ export const GmailEmailList = () => (
       </GmailEmailListSettingsRight>
     </GmailEmailListSettings>
     <GmailEmailSections />
+    <GmailEmailRows />
   </GmailEmailListContainer>
 );
