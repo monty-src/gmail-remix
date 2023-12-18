@@ -21,19 +21,21 @@ export const GlobalStyles = createGlobalStyle`
   .MuiButton-textPrimary { color: #000 !important; }
 `;
 
-
 /**
  * Gmail App
- * 
- * 
+ *
+ *
  * @returns {JSX.Element}
  */
 export const GmailApp = styled.section``;
 
 /**
  * Gmail Body
- * 
- * 
+ *
+ *
  * @returns {JSX.Element}
  */
-export const GmailBody = styled.section``;
+export const GmailBody = styled.section`
+  display: flex;
+  height: 100vh;
+`;

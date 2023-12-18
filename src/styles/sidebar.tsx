@@ -13,6 +13,9 @@ import styled from "styled-components";
  * @returns {JSX.Element}
  */
 export const GmailSidebarContainer = styled.section`
+  flex: 0.3;
+  max-width: 300px;
+  padding-right: 20px;
   > button {
     padding: 15px !important;
     margin: 15px 0 15px 10px !important;

@@ -1,20 +1,19 @@
 /**
-/**
- * components/icons/DuoIcon
+ * components/icons/RedoIcon
  *
  *
  */
 import { IconLayout } from "./IconLayout";
-import Duo from "@mui/icons-material/Duo";
+import Redo from "@mui/icons-material/Redo";
 
 /**
- * Duo Icon
+ * Redo Icon
  *
  *
  * @returns {JSX.Element}
  */
-export const DuoIcon = () => (
+export const RedoIcon = () => (
   <IconLayout>
-    <Duo />
+    <Redo />
   </IconLayout>
 );
