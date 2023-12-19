@@ -9,8 +9,10 @@ import { GmailMail } from "./mail/GmailMail";
 import { GmailHeader } from "./headers/GmailHeader";
 import { GmailSidebar } from "./sidebar/GmailSidebar";
 
-import { GmailApp, GmailBody } from "../styles/styles";
 import { GmailEmailList } from "./mail/GmailEmailList";
+import { GmailSendMail } from "./sendmail/GmailSendMail";
+
+import { GmailApp, GmailBody } from "../styles/styles";
 
 /**
  * App
@@ -30,6 +32,7 @@ function App() {
             <Route path="/" element={<GmailEmailList />} />
           </Routes>
         </GmailBody>
+        <GmailSendMail />
       </GmailApp>
     </Router>
   );

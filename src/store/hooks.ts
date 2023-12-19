@@ -1,5 +1,5 @@
 /**
- * src/store/template/template
+ * store/hooks
  *
  *
  */

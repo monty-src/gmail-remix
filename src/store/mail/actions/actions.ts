@@ -1,5 +1,5 @@
 /**
- * src/store/template/actions/actions
+ * store/mail/actions/actions
  *
  *
  */

@@ -1,3 +1,8 @@
+/**
+ * store/mail/selectors/selectSendMessageIsOpen
+ *
+ *
+ */
 import { RootState } from "../../reducers";
 import { useAppSelector } from "../../hooks";
 
