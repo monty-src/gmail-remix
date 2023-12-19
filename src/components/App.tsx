@@ -8,11 +8,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GmailMail } from "./mail/GmailMail";
 import { GmailHeader } from "./headers/GmailHeader";
 import { GmailSidebar } from "./sidebar/GmailSidebar";
-
 import { GmailEmailList } from "./mail/GmailEmailList";
 import { GmailSendMail } from "./sendmail/GmailSendMail";
+import { selectSendMessageIsOpen } from "../store/mail/selectors/selectSendMessageIsOpen";
 
 import { GmailApp, GmailBody } from "../styles/styles";
+import { useAppSelector } from "../store/hooks";
 
 /**
  * App
@@ -21,6 +22,7 @@ import { GmailApp, GmailBody } from "../styles/styles";
  * @returns {JSX.Element}
  */
 function App() {
+  const sendMessageIsOpen = useAppSelector(selectSendMessageIsOpen);
   return (
     <Router>
       <GmailApp>
@@ -32,7 +34,7 @@ function App() {
             <Route path="/" element={<GmailEmailList />} />
           </Routes>
         </GmailBody>
-        <GmailSendMail />
+        {sendMessageIsOpen && <GmailSendMail />}
       </GmailApp>
     </Router>
   );

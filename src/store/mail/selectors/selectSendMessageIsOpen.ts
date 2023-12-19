@@ -4,7 +4,6 @@
  *
  */
 import { RootState } from "../../reducers";
-import { useAppSelector } from "../../hooks";
 
 /**
  * Select Message Is Open
@@ -12,6 +11,5 @@ import { useAppSelector } from "../../hooks";
  *
  * @returns {boolean}
  */
-export const selectMessageIsOpen = (): boolean => {
-  return useAppSelector((state: RootState) => state.mail.sendMessageIsOpen);
-};
+export const selectSendMessageIsOpen = (state: RootState): boolean =>
+  state.mail.sendMessageIsOpen;

@@ -3,17 +3,17 @@
  *
  *
  */
-import { Draft, PayloadAction } from "@reduxjs/toolkit";
+import { Draft } from "@reduxjs/toolkit";
 
 /**
  * Close Send Message
  *
  *
- * @param {Draft<{}>} state
- * @param {PayloadAction<{}>} action
+ * @param {Draft<{ sendMessageIsOpen: boolean }>} state
  * @returns {void}
  */
 export const closeSendMessage = (
-  state: Draft<{}>,
-  action: PayloadAction<{}>
-) => {};
+  state: Draft<{ sendMessageIsOpen: boolean }>
+) => {
+  state.sendMessageIsOpen = false;
+};

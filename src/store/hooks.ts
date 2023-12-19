@@ -13,4 +13,3 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 /** React hook use app selector */
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-export default {};

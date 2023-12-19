@@ -119,3 +119,18 @@ export const GmailSendMailSendButton = styled(Button)`
   text-transform: capitalize !important;
   background-color: #3079ed !important;
 `;
+
+/**
+ * Gmail Send Mail Form Error
+ * 
+ * 
+ * @returns {JSX.Element}
+ */
+export const GmailSendMailFormError = styled.p`
+  padding: 2px;
+  text-align: right;
+
+  color: #FF0000;
+  background-color: #FFF;
+
+`;
