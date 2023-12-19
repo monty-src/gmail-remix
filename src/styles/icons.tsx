@@ -13,7 +13,9 @@ import { Close, LabelImportant } from "@mui/icons-material";
  *
  * @returns {JSX.Element}
  */
-export const LabelImportantContainer = styled(LabelImportant)<{ color?: string; }>`
+export const LabelImportantContainer = styled(LabelImportant)<{
+  color?: string;
+}>`
   color: ${({ color }) => color};
 `;
 
@@ -23,4 +25,8 @@ export const LabelImportantContainer = styled(LabelImportant)<{ color?: string; 
  *
  * @returns {JSX.Element}
  */
-export const CloseContainer = styled(Close)<{}>``;
+export const CloseContainer = styled(Close)<{
+  color?: string;
+}>`
+  color: ${({ color }) => color};
+`;

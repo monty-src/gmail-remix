@@ -27,14 +27,20 @@ export const GmailSendMail = () => {
     <GmailSendMailContainer>
       <GmailSendMailHeader>
         <h3>New Message</h3>
-        <CloseIcon />
+        <CloseIcon color="#808080" />
       </GmailSendMailHeader>
       <GmailSendMailForm>
         <GmailSendMailInput1 />
         <GmailSendMailInput2 />
         <GmailSendMailInput3 />
         <GmailSendMailOptions>
-          <GmailSendMailSendButton>Send</GmailSendMailSendButton>
+          <GmailSendMailSendButton
+            type="submit"
+            color="primary"
+            variant="contained"
+          >
+            Send
+          </GmailSendMailSendButton>
         </GmailSendMailOptions>
       </GmailSendMailForm>
     </GmailSendMailContainer>
