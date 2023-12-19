@@ -29,4 +29,7 @@ export const CloseContainer = styled(Close)<{
   color?: string;
 }>`
   color: ${({ color }) => color};
+  &:hover {
+    color: ${({ color }) => color && "#FFF"};
+  }
 `;

@@ -10,6 +10,7 @@ import { CloseContainer } from "../../styles/icons";
 
 interface CloseIconProps {
   color?: string;
+  pointer?: boolean;
 }
 
 /**
@@ -20,10 +21,9 @@ interface CloseIconProps {
  * @returns {JSX.Element}
  */
 export const CloseIcon = ({ color }: CloseIconProps) => {
-  console.log('color: ', color);
   return (
     <IconLayout>
-      <CloseContainer color={color} />
+      <CloseContainer color={color}  />
     </IconLayout>
   );
 };

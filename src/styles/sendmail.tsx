@@ -42,7 +42,7 @@ export const GmailSendMailHeader = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  padding: 13px;
+  padding: 3px 3px 3px 13px;
 
   color: #808080;
 
@@ -58,7 +58,21 @@ export const GmailSendMailHeader = styled.section`
  *
  * @returns {JSX.Element}
  */
-export const GmailSendMailForm = styled.form``;
+export const GmailSendMailForm = styled.form`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  > input,
+  > textarea {
+    height: 30px;
+    padding: 10px;
+
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #f5f5f5;
+  }
+`;
 
 /**
  * Gmail Send Mail Input1
@@ -77,12 +91,14 @@ export const GmailSendMailInput1 = styled.input``;
 export const GmailSendMailInput2 = styled.input``;
 
 /**
- * Gmail Send Mail Input3
+ * Gmail Send Mail Input Send Message
  *
  *
  * @returns {JSX.Element}
  */
-export const GmailSendMailInput3 = styled.input``;
+export const GmailSendMailInputSendMessage = styled.textarea`
+  flex: 1;
+`;
 
 /**
  * Gmail Send Mail Options
@@ -99,8 +115,7 @@ export const GmailSendMailOptions = styled.section``;
  * @returns {JSX.Element}
  */
 export const GmailSendMailSendButton = styled(Button)`
-  margin: 15px;
-
-  text-transform: capitalize;
+  margin: 15px !important;
+  text-transform: capitalize !important;
   background-color: #3079ed !important;
 `;
