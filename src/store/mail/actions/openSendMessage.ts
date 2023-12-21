@@ -14,6 +14,6 @@ import { Draft } from "@reduxjs/toolkit";
  */
 export const openSendMessage = (
   state: Draft<{ sendMessageIsOpen: boolean }>
-) => {
+): void => {
   state.sendMessageIsOpen = true;
 };

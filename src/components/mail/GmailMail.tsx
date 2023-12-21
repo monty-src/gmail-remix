@@ -29,6 +29,8 @@ import {
   GmailMailBodyHeader,
   GmailMailBodyMessage,
 } from "../../styles/mail";
+import { useAppSelector } from "../../store/hooks";
+import { selectedMail } from "../../store/mail/selectors/selectedMail";
 
 /**
  * Gmail Email List
@@ -37,8 +39,11 @@ import {
  * @returns {JSX.Element}
  */
 export const GmailMail = () => {
+  const mail = useAppSelector(selectedMail);
   /** Use navigate from react-router-dom */
   const navigate = useNavigate();
+
+  console.log("mail: ", mail);
 
   /**
    * Handle Navigating Home
@@ -70,12 +75,12 @@ export const GmailMail = () => {
       </GmailMailTools>
       <GmailMailBody>
         <GmailMailBodyHeader>
-          <h2>Subject</h2>
+          <h2>{mail.subject}</h2>
           <LabelImportantIcon color="#e8ab02" />
-          <p>Title</p>
-          <GmailMailBodyTitle>10pm</GmailMailBodyTitle>
+          <p>{mail.title}</p>
+          <GmailMailBodyTitle>{mail.time}</GmailMailBodyTitle>
         </GmailMailBodyHeader>
-        <GmailMailBodyMessage>This is a message</GmailMailBodyMessage>
+        <GmailMailBodyMessage>{mail.description}</GmailMailBodyMessage>
       </GmailMailBody>
     </GmailMailContainer>
   );

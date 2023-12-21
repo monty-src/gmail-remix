@@ -17,6 +17,8 @@ import {
 
 import { StarBorderOutlinedIcon } from "../icons/StarBorderOutlinedIcon";
 import { LabelImportantOutlinedIcon } from "../icons/LabelImportantOutlinedIcon";
+import { useAppDispatch } from "../../store/hooks";
+import { selectMail } from "../../store/mail/slice";
 
 /**
  * Gmail Email List
@@ -30,7 +32,8 @@ export const GmailEmailRow = ({
   subject,
   time,
   description,
-}: any) => {
+}: any): JSX.Element => {
+  const dispatch = useAppDispatch();
   /** Use navigate from react-router-dom */
   const navigate = useNavigate();
 
@@ -40,7 +43,18 @@ export const GmailEmailRow = ({
    *
    * @returns {void}
    */
-  const handleNavigatingToMail = (): void => navigate("/mail");
+  const handleNavigatingToMail = (): void => {
+    dispatch(
+      selectMail({
+        id,
+        title,
+        subject,
+        description,
+        time,
+      })
+    );
+    navigate("/mail");
+  };
 
   return (
     <GmailEmailRowContainer onClick={handleNavigatingToMail}>

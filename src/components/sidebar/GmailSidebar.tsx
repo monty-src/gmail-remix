@@ -12,7 +12,6 @@ import { GmailSidebarOptions } from "./GmailSidebarOptions";
 
 import { GmailSidebarContainer } from "../../styles/sidebar";
 
-
 /**
  * Gmail Sidebar
  *

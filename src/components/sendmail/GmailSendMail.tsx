@@ -4,7 +4,12 @@
  *
  */
 import { useForm } from "react-hook-form";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+
+import { db } from "../../firebase";
 import { CloseIcon } from "../icons/CloseIcon";
+import { useAppDispatch } from "../../store/hooks";
+import { closeSendMessage } from "../../store/mail/slice";
 
 import {
   GmailSendMailForm,
@@ -13,12 +18,10 @@ import {
   GmailSendMailHeader,
   GmailSendMailOptions,
   GmailSendMailContainer,
+  GmailSendMailFormError,
   GmailSendMailSendButton,
   GmailSendMailInputSendMessage,
-  GmailSendMailFormError,
 } from "../../styles/sendmail";
-import { useAppDispatch } from "../../store/hooks";
-import { closeSendMessage } from "../../store/mail/slice";
 
 /**
  * Gmail Send Mail
@@ -26,7 +29,7 @@ import { closeSendMessage } from "../../store/mail/slice";
  *
  * @returns {JSX.Element}
  */
-export const GmailSendMail = () => {
+export const GmailSendMail = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const {
@@ -35,9 +38,15 @@ export const GmailSendMail = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: any) => {
-    console.log("data: ", data);
-    console.log("errors: ", errors);
+  const onSubmit = async (data: any) => {
+    const addEmailDocPayload = {
+      to: data.to,
+      subject: data.subject,
+      message: data.message,
+      timestamp: serverTimestamp(),
+    };
+    await addDoc(collection(db, "emails"), addEmailDocPayload);
+    dispatch(closeSendMessage());
   };
 
   const handleCloseIconClick = () => {

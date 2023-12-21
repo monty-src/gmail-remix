@@ -14,6 +14,12 @@ import styled from "styled-components";
 export const GmailEmailListContainer = styled.section`
   flex: 1;
   overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 /**
@@ -57,8 +63,15 @@ export const GmailEmailListSettingsRight = styled.section``;
  * @returns {JSX.Element}
  */
 export const GmailEmailSectionsContainer = styled.section`
+  top: 0;
+  z-index: 999;
+  position: sticky;
+
   display: flex;
   align-items: center;
+
+  background-color: #fff;
+  border-bottom: 1px solid #f5f5f5;
 `;
 
 /**
@@ -107,7 +120,9 @@ export const GmailEmailSectionContainer = styled.section<{
  *
  * @returns {JSX.Element}
  */
-export const GmailEmailRowsContainer = styled.section``;
+export const GmailEmailRowsContainer = styled.section`
+  padding-bottom: 20%;
+`;
 
 /**
  * Gmail Email Row Container

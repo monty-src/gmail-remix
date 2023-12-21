@@ -3,7 +3,17 @@
  *
  *
  */
+import { useEffect, useState } from "react";
+
 import { Checkbox } from "@mui/material";
+import {
+  DocumentData,
+  collection,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 
 import { RedoIcon } from "../icons/RedoIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
@@ -22,6 +32,12 @@ import {
   GmailEmailListSettingsRight,
 } from "../../styles/email";
 import { GmailEmailRows } from "./GmailEmailRows";
+import { db } from "../../firebase";
+
+interface Email {
+  id: string;
+  data: DocumentData;
+}
 
 /**
  * Gmail Email List
@@ -29,23 +45,40 @@ import { GmailEmailRows } from "./GmailEmailRows";
  *
  * @returns {JSX.Element}
  */
-export const GmailEmailList = () => (
-  <GmailEmailListContainer>
-    <GmailEmailListSettings>
-      <GmailEmailListSettingsLeft>
-        <Checkbox />
-        <ArrowDropDownIcon />
-        <RedoIcon />
-        <MoreVertIcon />
-      </GmailEmailListSettingsLeft>
-      <GmailEmailListSettingsRight>
-        <ChevronLeftIcon />
-        <ChevronRightIcon />
-        <KeyboardHideIcon />
-        <SettingsIcon />
-      </GmailEmailListSettingsRight>
-    </GmailEmailListSettings>
-    <GmailEmailSections />
-    <GmailEmailRows />
-  </GmailEmailListContainer>
-);
+export const GmailEmailList = () => {
+  const [emails, setEmails] = useState<Email[]>([]);
+
+  useEffect(() => {
+    const collectionEmails = collection(db, "emails");
+    const queryEmails = query(collectionEmails, orderBy("timestamp", "desc"));
+    onSnapshot(queryEmails, (snapshot) => {
+      setEmails(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
+  return (
+    <GmailEmailListContainer>
+      <GmailEmailListSettings>
+        <GmailEmailListSettingsLeft>
+          <Checkbox />
+          <ArrowDropDownIcon />
+          <RedoIcon />
+          <MoreVertIcon />
+        </GmailEmailListSettingsLeft>
+        <GmailEmailListSettingsRight>
+          <ChevronLeftIcon />
+          <ChevronRightIcon />
+          <KeyboardHideIcon />
+          <SettingsIcon />
+        </GmailEmailListSettingsRight>
+      </GmailEmailListSettings>
+      <GmailEmailSections />
+      <GmailEmailRows />
+    </GmailEmailListContainer>
+  );
+};

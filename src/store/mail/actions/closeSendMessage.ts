@@ -1,5 +1,5 @@
 /**
- * src/store/mail/actions/closeSendMessage
+ * store/mail/actions/closeSendMessage
  *
  *
  */
@@ -14,6 +14,6 @@ import { Draft } from "@reduxjs/toolkit";
  */
 export const closeSendMessage = (
   state: Draft<{ sendMessageIsOpen: boolean }>
-) => {
+): void => {
   state.sendMessageIsOpen = false;
 };

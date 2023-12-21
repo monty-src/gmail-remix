@@ -14,6 +14,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
+    overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
   }
 
